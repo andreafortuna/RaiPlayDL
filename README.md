@@ -2,7 +2,7 @@
 RaiPlay Podcast Downloader
 
 
-## How to configure enviroment
+## How to configure environment
 
 ```
 $ python3 -m venv env
