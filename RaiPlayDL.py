@@ -21,7 +21,10 @@ class Raipodcast():
                 fh.write(chunk)
 
     def process(self, folder):
-		#Clean tmp directory		
+        #Check tmp directory
+        if not os.path.exists('./tmp'):
+            os.makedirs('./tmp')
+        #Clean tmp directory		
         files = glob.glob('tmp/*')
         for f in files:
             os.remove(f)
