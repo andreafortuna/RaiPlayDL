@@ -1,3 +1,4 @@
 env/
 *.mp3
-tmp/*
+tmp/*.mp3
+tmp/*.jpg
