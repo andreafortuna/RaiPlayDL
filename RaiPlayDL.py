@@ -50,11 +50,11 @@ class Raipodcast():
         for element in allelements:
             if element.has_attr('data-mediapolis') and element.has_attr('data-title'):				
                 mp3 = url = urljoin(self.url, element['data-mediapolis'])
-                title = element['data-title']              
+                singletitle = element['data-title']              
                 filename = str(elementID).zfill(2) + "_"  + str(title).strip().replace(' ', '_')
                 filename = re.sub(r'(?u)[^-\w.]', '', filename)                   
                 elementID = elementID + 1
-                print ("Download \"" + title + "\" (" + mp3 + ")")                
+                print ("Download \"" + singletitle + "\" (" + mp3 + ")")                
                 self.getFile(mp3, "tmp/" + filename + ".mp3")
 
         print ("Merge all MP3 files...")
